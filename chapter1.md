@@ -53,7 +53,6 @@ hflights %>%
 `@sct`
 
 ```{r}
-# Test ...
+success_msg("Sehr gut!")
 ```
 
-***
