@@ -36,8 +36,9 @@ hflights %>%
 ***
 
 ```yaml
-type: NormalExercise 
+type: NormalExercise
 xp: 30
+key: f0cea3c0a0
 ```
 
 `@instructions`
