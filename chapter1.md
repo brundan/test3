@@ -6,10 +6,11 @@ description: This is a template chapter.
 ## Advanced Group By Exercises
 
 ```yaml
-type: TabExercise
+type: NormalExercise
+key: 8ac8978bec
 lang: r
 xp: 100
-key: 835009c486
+skills: 1
 ```
 
 By now you've learned the fundamentals of `dplyr`: the five data manipulation verbs and the additional `group_by()` function to discover interesting group-wise statistics. This exercise brings together these concepts and provides you with an opportunity to combine them to answer some interesting questions.
@@ -35,9 +36,8 @@ hflights %>%
 ***
 
 ```yaml
-type: NormalExercise
+type: NormalExercise 
 xp: 30
-key: 8818cc4186
 ```
 
 `@instructions`
