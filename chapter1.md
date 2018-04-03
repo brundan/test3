@@ -1,61 +1,46 @@
 ---
-title: Template Chapter 1
-description: This is a template chapter.
+title       : This is chapter 1
+description : This is chapter 1 description
 ---
 
-## Advanced Group By Exercises
+## Interactive Exercise Title
 
 ```yaml
 type: NormalExercise
-key: 8ac8978bec
 lang: r
 xp: 100
-skills: 1
+key: 330f387350
 ```
 
-By now you've learned the fundamentals of `dplyr`: the five data manipulation verbs and the additional `group_by()` function to discover interesting group-wise statistics. This exercise brings together these concepts and provides you with an opportunity to combine them to answer some interesting questions.
+This basic exercise will challenge you to assign a variable in R.
 
-Let us suppose we want to find the most visited destination for each carrier. Before reading ahead, please spend a couple of minutes thinking about how you might go about solving this exercise using dplyr.
+`@instructions`
+- Assign `5` to the variable `x` in the editor on the right.
 
-As this is the first time you are combining multiple dplyr concepts, we have broken this exercise down into smaller steps. Each step will allow you to focus on a specific concept.
+`@hint`
+Use `<-` for assignment.
 
 `@pre_exercise_code`
-
 ```{r}
-library(dplyr)
-library(hflights)
+y <- 3
 ```
 
 `@sample_code`
-
 ```{r}
-hflights %>%
-
+# Assign 5 to the variable x
 ```
-
-***
-
-```yaml
-type: NormalExercise
-xp: 30
-key: f0cea3c0a0
-```
-
-`@instructions`
-
-Compute for every carrier, the aggregate number of visits to each destination.
 
 `@solution`
-
 ```{r}
-hflights %>% 
-  group_by(UniqueCarrier, Dest) %>%
-  summarise(n = n())
+# Assign 5 to the variable x
+x <- 5
 ```
 
 `@sct`
-
 ```{r}
-success_msg("Sehr gut!")
+test_error()
+test_object("x",
+            undefined_msg = "Make sure to define `x`!",
+            incorrect_msg = "Have you correctly assigned 5 to `x`!")
+success_msg("Awesome! It's considered good style to write spaces either side of the assignment arrow.")
 ```
-
