@@ -3,44 +3,57 @@ title: Template Chapter 1
 description: This is a template chapter.
 ---
 
-## Ex 1.1
+## Advanced Group By Exercises
 
 ```yaml
-type: NormalExercise
-lang: r
-xp: 100
-skills: 1
-key: dd1136c507
+type: TabExercise 
+lang: r 
+xp: 100 
 ```
 
-Do some data science.
+By now you've learned the fundamentals of `dplyr`: the five data manipulation verbs and the additional `group_by()` function to discover interesting group-wise statistics. This exercise brings together these concepts and provides you with an opportunity to combine them to answer some interesting questions.
 
-`@instructions`
+Let us suppose we want to find the most visited destination for each carrier. Before reading ahead, please spend a couple of minutes thinking about how you might go about solving this exercise using dplyr.
 
-
-`@hint`
-
+As this is the first time you are combining multiple dplyr concepts, we have broken this exercise down into smaller steps. Each step will allow you to focus on a specific concept.
 
 `@pre_exercise_code`
 
 ```{r}
-
+library(dplyr)
+library(hflights)
 ```
 
 `@sample_code`
 
 ```{r}
+hflights %>%
 
 ```
+
+***
+
+```yaml
+type: NormalExercise 
+xp: 30
+```
+
+`@instructions`
+
+Compute for every carrier, the aggregate number of visits to each destination.
 
 `@solution`
 
 ```{r}
-
+hflights %>% 
+  group_by(UniqueCarrier, Dest) %>%
+  summarise(n = n())
 ```
 
 `@sct`
 
 ```{r}
-
+# Test ...
 ```
+
+***
