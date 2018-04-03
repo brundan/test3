@@ -22,6 +22,7 @@ Use `<-` for assignment.
 
 `@pre_exercise_code`
 ```{r}
+library(dplyr)
 y <- 3
 ```
 
